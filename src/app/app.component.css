@@ -1,0 +1,12 @@
+.boton {
+	background-color: rgb(180, 67, 32);
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+  }
+
+.name {
+	position: relative;
+	top: 100px;
+	left: 100px;
+  }

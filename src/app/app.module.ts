@@ -10,6 +10,8 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { ContactComponent } from './components/contact/contact.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

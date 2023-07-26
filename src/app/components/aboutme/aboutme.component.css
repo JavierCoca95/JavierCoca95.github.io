@@ -1,18 +1,38 @@
-.img2 {
-	float: right;
-	width: 100%;
-	height: auto;
+section {
+	display: flex;
+	flex-direction: column;
   }
   
   .aboutme {
-	clear: both;
-	margin-left: 10px;
+	margin-left: 20px;
+	padding: 0;
+	font-size: 10px;
+  }
+  
+  .img2 {
+	max-width: 100%;
   }
 
-  h1 {
-	text-align: center;
-	font-family: 'Edu SA Beginner', cursive;
-	font-size: 50px;
-	margin-bottom: 50px;
-	margin-top: 50px;
-}
+  
+	.aboutme_secondpart {
+	  flex: 1;
+	  font-size: 10px;
+	  margin-left: 20px;
+	}
+  
+	.img3 {
+	  margin-right: 10px;
+	}
+	h1 {
+		text-align: center;
+		font-family: 'Anek Telugu', sans-serif;
+	}
+	.aboutme-card {
+		max-width: 400px;
+	  }
+	  
+	  .cardheader-image {
+		background-image: url('../../../assets/card-icon.png');
+		background-size: cover;
+	  }
+	  

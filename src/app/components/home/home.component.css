@@ -40,17 +40,9 @@ section.presentation {
 
 p.description {
 	font-size: 24px;
-	font-family: 'Edu SA Beginner', cursive;
+	font-family: 'Anek Telugu', sans-serif;
 	text-align: center;
 	margin-right: 5px;
-}
-
-p.description2 {
-	font-size: 13px;
-	text-align: center;
-	margin-right: 25px;
-	
-
 }
 
 img {

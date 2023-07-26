@@ -1,36 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Home</title>
-	<link rel="stylesheet" href="home.component.css">
-	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-</head>
-<body>
-	<section class="header-menu">
-		<button mat-button color="basic" >Home</button>
-		<button mat-button color="basic" >Sobre mi</button>
-		<button mat-button color="basic" >Proyectos</button>
-		<button mat-button color="basic" >Contacto</button>
-	</section>
-	
-	<div class="name">
+<section id="home">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+	<div class="container-fluid">
+	  <a class="navbar-brand" href="#">riverfront</a>
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarScroll">
+		<ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100%;">
+		  <li class="nav-item">
+			<a class="nav-link active" aria-current="page" href="#">Inicio</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#aboutme">Sobre mi</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" aria-current="page" href="#projects">Proyectos</a>
+		  </li>
+		  <li class="nav-item">
+			<a class="nav-link" href="#contact">Contacto</a>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+  </nav>
+
+
+<div class="name">
 		<h1 class="myname">Javier Coca</h1>
 		<h2 class="subname">Desarrollador Web</h2>
-	</div>
-
-
-
-
+</div>
 <section class="presentation">
 	<div>
-		<p class="description">Hola! Soy Javi,<p>
+		<p class="description">¡Hola! Soy Javi,<p>
 		<p class="description">desarrollador frontend</p>
-		<p class="description2">(en proceso)</p>
 	</div>
 	<img class="img" src="assets/profile-pic.png" alt="me!">
 </section>
-</body>
+</section>
+
 
 
 

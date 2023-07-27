@@ -1,63 +1,28 @@
 <section id="projects">
 <h1> Proyectos </h1>
 <p>Estos son algunos de los proyectos que he realizado</p>
-<mat-card class="example-card">
-	<mat-card-header>
-	  <div mat-card-avatar class="example-header-image"></div>
-	  <mat-card-title>App de musica</mat-card-title>
-	  <mat-card-subtitle>Angular</mat-card-subtitle>
-	</mat-card-header>
-	<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-	<mat-card-content>
-	  <p>
-		Este proyecto es una aplicacion de musica similar a Spotify, pero con la diferencia de que esta hecha en Angular.
-		Para llevarla a cabo he utilizado Angular, HTML, CSS y TypeScript.
-		Aprendi la estructura de un proyecto en Angular, a utilizar el CLI, a crear componentes, servicios, pipes, directivas, etc.
-	  </p>
-	</mat-card-content>
-	<mat-card-actions>
-	  <button mat-button>codigo</button>
-	  <button mat-button>github</button>
-	</mat-card-actions>
-  </mat-card>
-  <mat-card class="example-card">
-	<mat-card-header>
-	  <div mat-card-avatar class="example-header-image"></div>
-	  <mat-card-title>Pagina TV</mat-card-title>
-	  <mat-card-subtitle>JavasCript</mat-card-subtitle>
-	</mat-card-header>
-	<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-	<mat-card-content>
-	  <p>
-		Este proyecto es una pagina web de peliculas y series, similar a Netflix, hecho con JavaScript crudo.
-		Para llevarla a cabo he utilizado HTML, CSS y JavaScript.
-	  </p>
-	</mat-card-content>
-	<mat-card-actions>
-	  <button mat-button>codigo</button>
-	  <button mat-button>github</button>
-	</mat-card-actions>
-  </mat-card>
-  <mat-card class="example-card">
-	<mat-card-header>
-	  <div mat-card-avatar class="example-header-image"></div>
-	  <mat-card-title>Carrusel de imagenes</mat-card-title>
-	  <mat-card-subtitle>JavasCript</mat-card-subtitle>
-	</mat-card-header>
-	<img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-	<mat-card-content>
-	  <p>
-		Este fue mi primer proyecto, un carrusel de imagenes hecho con JavaScript crudo.
-		Para llevarla a cabo he utilizado HTML, CSS y JavaScript.
-		Aprendi a utilizar GitHub y a subir mis proyectos, propacion de eventos, ademas de folding y estructura de proyectos.
-	  </p>
-	</mat-card-content>
-	<mat-card-actions>
-	  <button mat-button>codigo</button>
-	  <button mat-button>github</button>
-	</mat-card-actions>
-  </mat-card>
+<ul>
+	<li *ngFor="let project of projects">
+		<mat-card class="example-card">
+			<mat-card-header>
+			<div mat-card-avatar class="example-header-image">
+				<img src="{{ project.icon }}" alt="Project Icon">
+			</div>
+			  <mat-card-title>{{project.name}}</mat-card-title>
+			  <mat-card-subtitle>{{project.skills}}</mat-card-subtitle>
+			</mat-card-header>
+			<img mat-card-image src={{project.image}} alt="project picture">
+			<mat-card-content>
+			  <p>
+				{{project.description}}
+			  </p>
+			</mat-card-content>
+			<mat-card-actions>
+			  <button mat-button>LINK</button>
+			  <button mat-button>SHARE</button>
+			</mat-card-actions>
+		  </mat-card>
 
-</section>
+	</li>
 
 

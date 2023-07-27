@@ -10,7 +10,10 @@ h1 {
   }
   
   .example-header-image {
-	background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-	background-size: cover;
+	width: 50px;
+	height: 50px;
+	background-size: contain;
+	max-width: 100px;
+	transform: scale(0.5);
   }
   

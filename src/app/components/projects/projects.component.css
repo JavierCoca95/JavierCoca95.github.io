@@ -16,4 +16,18 @@ h1 {
 	max-width: 100px;
 	transform: scale(0.5);
   }
-  
+  ul {
+	list-style-type: none;
+	width: 100%;
+	padding: 0;
+  }
+
+  .skills {
+	font-size: 9px;
+  }
+
+  .project-description {
+	font-size: 13px;
+	margin-left: 10px;
+	margin-right: 10px;
+  }

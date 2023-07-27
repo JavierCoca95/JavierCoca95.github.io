@@ -8,6 +8,7 @@ import { AboutmeComponent } from './components/aboutme/aboutme.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { MatCardModule} from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

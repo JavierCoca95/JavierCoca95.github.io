@@ -1,0 +1,32 @@
+[{
+	"name": "App de música",
+	"description": "App de música similar a Spotify hecha con Angular. Entre sus funcionalidades se encuentran: login, registro, búsqueda de canciones, reproducción de canciones, creación de playlist, etc.",
+	"skills": "Angular, NodeJS, Angular Material, TypeScript, Angular CLI, conexión y creación de API, etc.",
+	"icon": "../../assets/music-icon.png",
+	"image": "../../assets/app-music-pic.png",
+	"link": "https://www.google.com"
+	},
+	{
+	"name": "Página web de tienda online",
+	"description": "Página web de una tienda online hecha con JavaScript. Entre sus funcionalidades se encuentran: carrito de compras, selección de productos, animaciones, etc.",
+	"skills": "JavaScript, HTML, CSS, Bootstrap, manipulación del DOM, funciones que implementan animaciones, etc.",
+	"icon": "../../assets/shop-icon.png",
+	"image": "../../assets/shop-pic.png",
+	"link": "https://www.google.com"
+	},
+	{
+	"name": "Página TV",
+	"description": "Página web similar a Netflix, donde poder encontrar películas y series. Entre sus funcionalidades se encuentran: filtros por género, año, duración, descripción de películas y series, interfaz de usuario distinta para cada tipo de búsqueda, etc.",
+	"skills": "JavaScript, HTML, CSS, Bootstrap, llamadas a API, diseño de interfaz de usuario, estructura de proyecto, etc.",
+	"icon": "../../assets/tv-icon.png",
+	"image": "../../assets/tv-pic.png",
+	"link": "https://www.google.com"
+	},
+	{
+	"name": "Landing page Easybank",
+	"description": "Como parte de mi aprendizaje, tomé este reto de Frontend Mentor, el cual consistía en replicar una landing page de una empresa de banca online. Se otorgó un diseño de referencia y se debía replicar lo más fielmente posible. Entre sus funcionalidades se encuentran: animaciones, responsive design, etc.",
+	"skills": "HTML, CSS, Bootstrap, responsive design, metodología de trabajo basada en diseño de interfaz de usuario, etc.",
+	"image": "../../assets/easybank-cut.png",
+	"icon": "../../assets/bank-icon.png",
+	"link": "https://www.google.com"
+	}]

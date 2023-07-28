@@ -9,6 +9,10 @@ import {MatMenuModule} from '@angular/material/menu';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar'
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -24,7 +28,11 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatMenuModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

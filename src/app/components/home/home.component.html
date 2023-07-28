@@ -7,17 +7,8 @@
 	  </button>
 	  <div class="collapse navbar-collapse" id="navbarScroll">
 		<ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100%;">
-		  <li class="nav-item">
-			<a class="nav-link active" aria-current="page" href="#">Inicio</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#aboutme">Sobre mi</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" aria-current="page" href="#projects">Proyectos</a>
-		  </li>
-		  <li class="nav-item">
-			<a class="nav-link" href="#contact">Contacto</a>
+		  <li class="nav-item" *ngFor="let link of links">
+			<a class="nav-link" [href] = 'link.href'>{{link.title}}</a>
 		  </li>
 		</ul>
 	  </div>

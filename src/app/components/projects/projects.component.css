@@ -31,3 +31,9 @@ h1 {
 	margin-left: 10px;
 	margin-right: 10px;
   }
+
+
+.mat-mdc-snack-bar-container.snackbar-error {
+	width: 20px !important;
+	border: 1px solid red !important;
+  }

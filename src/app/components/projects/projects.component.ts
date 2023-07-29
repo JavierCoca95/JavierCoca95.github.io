@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { Project } from 'src/app/models/project.model';
 import { AppService } from 'src/app/services/appservice.service';
 import { Subscription} from 'rxjs';
@@ -10,10 +10,11 @@ import { ViewChild, TemplateRef } from '@angular/core';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class ProjectsComponent {
-  @ViewChild('errorsnack') customSnackBarTemplate! : TemplateRef<any>;
+  @ViewChild('errorsnack') customSnackBarTemplate! : TemplateRef<Element>;
 
   projects: Project[] = [];
   projectSub : Subscription = new Subscription();
@@ -29,10 +30,14 @@ export class ProjectsComponent {
     this.projectSub = this.appService.getProjects().subscribe({
       next: (res: Project[]) => {
         this.projects = res;
-        this._snack.openFromTemplate(this.customSnackBarTemplate);
+/*         this._snack.openFromTemplate(this.customSnackBarTemplate, {
+          horizontalPosition: "right",
+          verticalPosition: "top",
+          panelClass: 'snackbar-error'
+        }); */
       },
       error: (error: any) => {
-        this._snack.open('error', 'close');
+        //this._snack.open('error', 'close');
       console.error('Error occurred:', error);
         
       },

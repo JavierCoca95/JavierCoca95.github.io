@@ -1,9 +1,8 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { Project } from 'src/app/models/project.model';
+import { Component, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/services/appservice.service';
-import { Subscription} from 'rxjs';
-import { MatSnackBar} from '@angular/material/snack-bar';
-import { ViewChild, TemplateRef } from '@angular/core';
+import { Project } from '../../models/project.model';
 
 
 

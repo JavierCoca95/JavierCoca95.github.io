@@ -1,9 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpResponse } from '@angular/common/http';
-import { Observable, throwError, of} from 'rxjs';
-import { Project } from '../models/project.model';
+import { Observable } from 'rxjs';
 import { Link } from '../models/link.model';
-import { catchError } from 'rxjs';
+import { Project } from '../modules/home/models/project.model';
 
 @Injectable({
   providedIn: 'root'

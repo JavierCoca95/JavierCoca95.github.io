@@ -1,16 +1,14 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { AppService } from 'src/app/services/appservice.service';
+import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Link } from 'src/app/models/link.model';
-import { Subscription} from 'rxjs';
-
+import { AppService } from 'src/app/services/appservice.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],   
-  encapsulation: ViewEncapsulation.None,
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
+  styleUrls: ['./nav.component.css']
 })
-export class HomeComponent {
+export class NavComponent {
   links: Link[] = [];
   linkSub: Subscription = new Subscription();
 
@@ -18,8 +16,6 @@ export class HomeComponent {
 
   ngOnDestroy() {
     this.linkSub?.unsubscribe();
-    console.log('Se ha desuscrito');
-
   }
 
   ngOnInit() : void {
@@ -30,12 +26,7 @@ export class HomeComponent {
       error: (error: any) => {
         console.error('Error occurred:', error);
       },
-      complete: () => {
-        console.log('Observable completed');
-
-      }
-  })
+      complete: () => { }
+    })
   }
 }
-
-

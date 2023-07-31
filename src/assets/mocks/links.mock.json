@@ -1,8 +1,8 @@
 [{ "title": "Inicio", 
 	"href": "#" },
     { "title": "Sobre mi", 
-	"href": "#aboutme" },
+	"href": "/home#aboutme" },
     { "title": "Proyectos", 
-	"href": "#projects" },
+	"href": "/home#projects" },
     { "title": "Contacto", 
-	"href": "#contact" }]
+	"href": "/home#contact" }]

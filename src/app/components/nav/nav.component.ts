@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Link } from 'src/app/models/link.model';
+import { Link } from 'src/app/modules/home/models/link.model';
 import { AppService } from 'src/app/services/appservice.service';
 
 @Component({

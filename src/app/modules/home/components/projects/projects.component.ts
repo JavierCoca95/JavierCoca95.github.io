@@ -1,4 +1,4 @@
-import { Component, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, TemplateRef, ViewChild, ViewEncapsulation} from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/services/appservice.service';
@@ -29,11 +29,6 @@ export class ProjectsComponent {
     this.projectSub = this.appService.getProjects().subscribe({
       next: (res: Project[]) => {
         this.projects = res;
-/*         this._snack.openFromTemplate(this.customSnackBarTemplate, {
-          horizontalPosition: "right",
-          verticalPosition: "top",
-          panelClass: 'snackbar-error'
-        }); */
       },
       error: (error: any) => {
         //this._snack.open('error', 'close');

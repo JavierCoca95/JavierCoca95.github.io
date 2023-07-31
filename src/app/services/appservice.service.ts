@@ -4,11 +4,12 @@ import { Observable } from 'rxjs';
 import { Link } from '../modules/home/models/link.model';
 import { Project } from '../modules/home/models/project.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
 export class AppService {
-
+  
   constructor(private http: HttpClient) { }
 
   getLinks() : Observable<Link[]> {

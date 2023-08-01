@@ -9,8 +9,8 @@ import { Project } from '../modules/home/models/project.model';
   providedIn: 'root'
 })
 export class AppService {
-  
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient) {}
 
   getLinks() : Observable<Link[]> {
     return this.http.get<Link[]>(`assets/mocks/links.mock.json?v=` + Date.now())
@@ -22,3 +22,4 @@ export class AppService {
     return this.http.get<Project[]>(`assets/mocks/projects.json?v=` + Date.now());
   }
 }
+

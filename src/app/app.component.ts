@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AppService } from './services/appservice.service';
+
 
 
 @Component({
@@ -6,6 +8,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  deviceInfo!: { isMobile: boolean; isDesktop: boolean; isTablet: boolean; };
   title = 'my-app';
+
+  constructor(private appservice : AppService){}
+  ngOnInit(): void {
+
+    this.deviceInfo = this.appservice.devicetype();
+    
+  }
 }

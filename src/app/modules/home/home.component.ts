@@ -16,17 +16,9 @@ export class HomeComponent implements OnInit{
 
   constructor(private deviceService: AppService) {
   }
-
-  goToLink() {
-    window.scrollTo(this.appAboutMe);
-  }
-  
   ngOnInit() {
     this.deviceInfo = this.deviceService.devicetype();
   }
-
-  
-  
   }
 
 

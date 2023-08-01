@@ -25,7 +25,6 @@ export class HomeComponent{
   
   
   devicedetector() {
-    console.log('hello `Home` component');
     this.deviceInfo = this.deviceService.getDeviceInfo();
     return this.deviceInfo.deviceType 
   }

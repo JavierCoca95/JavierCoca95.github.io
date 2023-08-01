@@ -1,5 +1,5 @@
 <section id="home" class="container">
-	<!-- <div *ngIf="typeofdevice === 'mobile'"> -->
+	<div *ngIf="typeofdevice === 'mobile'">
 	<div class="mb-5">
 		<div class="d-flex flex-column justify-content-center align-items-center">
 			<div class="my-4 text-center">
@@ -10,9 +10,24 @@
 			</div>
 
 			<img class="rounded-circle shadow avatar-image" src="assets/images/profile-pic.png" alt="me!">
+			</div>
 		</div>
 	</div>
-	<!-- </div> -->
+
+	<div *ngIf="typeofdevice === 'desktop'">
+		<div class="mb-5">
+			<div class="d-flex flex-column justify-content-center align-items-center">
+				<div class="my-4 text-center">
+					<h1 style="font-size: 6rem" class="text-primary">Javier Coca</h1>
+					<h2 class="fs-1 my-0 py-0 fw-normal text-primary mb-4">Desarrollador Frontend</h2>
+					<p class="my-0 text-secondary fs-2 mb-3">¡Bienvenido a mi portfolio!</p>
+					<p class="text-secondary fs-2 mb-3">Aquí puedes ver algunos de mis trabajos</p>
+				</div>
+	
+				<img class="rounded-circle shadow avatar-image mb-3" src="assets/images/profile-pic.png" alt="me!">
+				</div>
+			</div>
+		</div>
 
 	<app-aboutme #aboutme></app-aboutme>
 	<app-projects #projects></app-projects>

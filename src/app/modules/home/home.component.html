@@ -1,5 +1,5 @@
 <section id="home" class="container">
-	<div *ngIf="typeofdevice === 'mobile'">
+	<div *ngIf="deviceInfo.isMobile">
 	<div class="mb-5">
 		<div class="d-flex flex-column justify-content-center align-items-center">
 			<div class="my-4 text-center">
@@ -14,7 +14,7 @@
 		</div>
 	</div>
 
-	<div *ngIf="typeofdevice === 'desktop'">
+	<div *ngIf="deviceInfo.isDesktop">
 		<div class="mb-5">
 			<div class="d-flex flex-column justify-content-center align-items-center">
 				<div class="my-4 text-center">

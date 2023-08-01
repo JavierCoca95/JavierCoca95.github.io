@@ -1,6 +1,6 @@
-import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
 import { AboutmeComponent } from './components/aboutme/aboutme.component';
-import { DeviceDetectorService, DeviceInfo, DeviceType } from 'ngx-device-detector';
+import { AppService } from 'src/app/services/appservice.service';
 
 
 
@@ -10,25 +10,25 @@ import { DeviceDetectorService, DeviceInfo, DeviceType } from 'ngx-device-detect
   styleUrls: ['./home.component.css'],   
   encapsulation: ViewEncapsulation.None,
 })
-export class HomeComponent{
-  deviceInfo : DeviceInfo = this.deviceService.getDeviceInfo();
-  typeofdevice : string;
+export class HomeComponent implements OnInit{
+  deviceInfo!: { isMobile: boolean; isDesktop: boolean; isTablet: boolean; };
   @ViewChild('aboutme') appAboutMe!: AboutmeComponent;
 
-  constructor(private deviceService: DeviceDetectorService) {
-    this.typeofdevice = this.devicedetector();
+  constructor(private deviceService: AppService) {
   }
 
   goToLink() {
     window.scrollTo(this.appAboutMe);
   }
   
-  
-  devicedetector() {
-    this.deviceInfo = this.deviceService.getDeviceInfo();
-    return this.deviceInfo.deviceType 
+  ngOnInit() {
+    this.deviceInfo = this.deviceService.devicetype();
   }
 
-}
+  
+  
+  }
+
+
 
 

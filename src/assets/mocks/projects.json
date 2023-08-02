@@ -1,32 +1,43 @@
 [{
 	"name": "App de música",
-	"description": "App de música similar a Spotify hecha con Angular. Entre sus funcionalidades se encuentran: login, registro, búsqueda de canciones, reproducción de canciones, creación de playlist, etc.",
-	"skills": "Angular, NodeJS, Angular Material, TypeScript, Angular CLI, conexión y creación de API, etc.",
+	"description_title": "App de música (incluido reproductor) similar a Spotify hecha con Angular.            ",
+	"description_body" : "Entre sus funcionalidades se encuentran: login, registro, búsqueda de canciones, reproducción de canciones, creación de playlist, etc.",
+	"skills": "Angular, NodeJS, Angular Material, TypeScript, Angular CLI, conexión y creación de API, diseño de interfaz de usuario, etc.",
 	"icon": "fa-solid fa-music",
-	"image": "../../assets/images/app-music-pic.png",
-	"link": "https://www.google.com"
+	"image": "../../assets/images/app-music.png",
+	"link": "https://www.google.com",
+	"id": "1"
   },
+  
   {
 	"name": "Tienda online",
-	"description": "Página web de una tienda online hecha con JavaScript. Entre sus funcionalidades se encuentran: carrito de compras, selección de productos, animaciones, etc.",
+	"description_title": "Página web de una tienda online de zapateria  hecha con JavaScript. ",
+	"description_body" : "Entre sus funcionalidades se encuentran: carrito de compras, selección de productos, animaciones, etc.",
 	"skills": "JavaScript, HTML, CSS, Bootstrap, manipulación del DOM, funciones que implementan animaciones, etc.",
 	"icon": "fa-solid fa-tag",
 	"image": "../../assets/images/shop-pic.png",
-	"link": "https://www.google.com"
+	"link": "https://www.google.com",
+	"id": "2"
   },
+
   {
 	"name": "Página TV",
-	"description": "Página web similar a Netflix, donde poder encontrar películas y series. Entre sus funcionalidades se encuentran: filtros por género, año, duración, descripción de películas y series, interfaz de usuario distinta para cada tipo de búsqueda, etc.",
+	"description_title": "Página web similar a Netflix, donde poder encontrar películas y series. ",
+	"description_body" : "Entre sus funcionalidades se encuentran: búsqueda de películas y series, visualización de información de las mismas, etc.",
 	"skills": "JavaScript, HTML, CSS, Bootstrap, llamadas a API, diseño de interfaz de usuario, estructura de proyecto, etc.",
 	"icon": "fa-solid fa-tv",
 	"image": "../../assets/images/tv-pic.png",
-	"link": "https://www.google.com"
+	"link": "https://www.google.com",
+	"id" : "3"
   },
+
   {
-	"name": "Landing page Easybank",
-	"description": "Reto de Frontend Mentor, el cual consistía en replicar una landing page de una empresa de banca online. Se otorgó un diseño de referencia y se debía replicar lo más fielmente posible.",
+	"name": "Landing page",
+	"description_title": "Reto de Frontend Mentor, replica una landing page de una banca online. ",
+	"description_body" : "Se otorgó un diseño de referencia y se debía replicar lo más fielmente posible.",
 	"skills": "HTML, CSS, Bootstrap, responsive design, metodología de trabajo basada en diseño de interfaz de usuario, etc.",
 	"icon": "fa-solid fa-building-columns",
 	"image": "../../assets/images/easybank-cut.png",
-	"link": "https://www.google.com"
+	"link": "https://www.google.com",
+	"id" : "4"
   }]

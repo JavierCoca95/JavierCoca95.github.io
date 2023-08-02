@@ -2,12 +2,12 @@
   <div *ngIf="deviceInfo.isMobile">
     <h1 class="text-center fw-bold text-primary">Sobre mi</h1>
 
-    <div class="mx-4">
+    <div class="mx-4 mb-5">
       <mat-card class="mb-4 rounded shadow">
         <mat-card-header class="d-flex align-items-center">
           <i class="fa-solid fa-rocket fs-5 text-secondary"></i>
           <div class="ms-3">
-            <mat-card-title>Inicios de 2022</mat-card-title>
+            <mat-card-title>2022</mat-card-title>
             <mat-card-subtitle
               >Inicio en la programacion con Campus 42 de
               telefonica</mat-card-subtitle
@@ -17,7 +17,7 @@
         <hr />
         <img
           mat-card-image
-          src="assets/images/aboutme.jpg"
+          src="assets/images/2022.jpg"
           alt="picture 2022"
         />
         <mat-card-content>
@@ -32,17 +32,17 @@
         <mat-card-header class="d-flex align-items-center">
           <i class="fa-solid fa-user fs-5 text-secondary"></i>
           <div class="ms-3">
-            <mat-card-title>Inicios de 2023</mat-card-title>
+            <mat-card-title>2023</mat-card-title>
             <mat-card-subtitle>Desarrollo web</mat-card-subtitle>
           </div>
         </mat-card-header>
         <hr />
         <img
           mat-card-image
-          src="assets/images/aboutme2.png"
+          src="assets/images/2023.jpg"
           alt="picture 2022"
         />
-        <mat-card-content>
+        <mat-card-content class="mb-4">
           <p>
             A partir de entonces he aprendido HTML, CSS y JavaScript por mi
             cuenta, y estoy familiarizado con una variedad de marcos y
@@ -50,6 +50,73 @@
           </p>
         </mat-card-content>
       </mat-card>
+    </div>
+  </div>
+  <div *ngIf="deviceInfo.isDesktop">
+    <div class="mt-5">
+      <h1 style="font-size: 5rem" class="text-center text-primary mt-3">
+        Sobre mi
+      </h1>
+    </div>
+    <div class="mx-4">
+      <div class="row">
+        <div class="col-6">
+          <mat-card class="mb-4 rounded shadow mx-auto">
+            <mat-card-header class="d-flex align-items-center">
+              <i class="fa-solid fa-rocket fs-5 text-secondary"></i>
+              <div class="ms-3">
+                <mat-card-title>2022</mat-card-title>
+                <mat-card-subtitle
+                  >Inicio en la programacion con Campus 42 de
+                  telefonica</mat-card-subtitle
+                >
+              </div>
+            </mat-card-header>
+            <hr />
+            <img
+              mat-card-image
+              style="width: 45%"
+              class="mx-auto"
+              src="assets/images/2022.jpg"
+              alt="picture 2022"
+            />
+            <mat-card-content class="mx-auto">
+              <p>
+                Comencé en esto aprendiendo Java y C, pero poco tiempo después
+                conocí el desarrollo web.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        <div class="col-6">
+          <mat-card class="mb-4 rounded shadow mx-auto">
+            <mat-card-header class="d-flex align-items-center">
+              <i class="fa-solid fa-user fs-5 text-secondary"></i>
+              <div class="ms-3">
+                <mat-card-title>2023</mat-card-title>
+                <mat-card-subtitle
+                  >Desarrollo web</mat-card-subtitle
+                >
+              </div>
+            </mat-card-header>
+            <hr />
+            <img
+              mat-card-image
+              style="width: 45%"
+              class="mx-auto"
+              src="assets/images/2023.jpg"
+              alt="picture 2022"
+            />
+            <mat-card-content class="mx-auto">
+              <p>
+                A partir de entonces he aprendido HTML, CSS y JavaScript por mi
+                cuenta, y estoy familiarizado con una variedad de marcos y
+                bibliotecas.
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,5 +1,6 @@
 <footer id="contact" class="">
-  <div class="container overflow-hidden mb-3">
+  <div *ngIf="deviceInfo.isMobile">
+    <div class="container overflow-hidden mb-3">
     <h2 class="text-center fw-bold text-primary">Contacto</h2>
     <div class="container overflow-hidden mb-2">
       <div class="row gx-4 text-center">
@@ -26,4 +27,6 @@
       <p>&copy; Coded by riverfront</p>
     </div>
   </div>
+  </div>
+  
 </footer>

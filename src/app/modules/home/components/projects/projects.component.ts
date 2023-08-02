@@ -1,4 +1,4 @@
-import { Component, TemplateRef, ViewChild, ViewEncapsulation} from '@angular/core';
+import { Component, Input, TemplateRef, ViewChild, ViewEncapsulation} from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Subscription } from 'rxjs';
 import { AppService } from 'src/app/services/appservice.service';
@@ -13,6 +13,7 @@ import { Project } from '../../models/project.model';
   encapsulation: ViewEncapsulation.None,
 })
 export class ProjectsComponent {
+  @Input() deviceInfo: any;
   @ViewChild('errorsnack') customSnackBarTemplate! : TemplateRef<Element>;
 
   projects: Project[] = [];

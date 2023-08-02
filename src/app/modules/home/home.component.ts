@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit{
   constructor(private deviceService: AppService) {
   }
   ngOnInit() {
-    this.deviceInfo = this.deviceService.devicetype();
+    this.deviceInfo = this.deviceService.deviceInfo;
   }
   }
 

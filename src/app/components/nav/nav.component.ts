@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Link } from 'src/app/modules/home/models/link.model';
 import { AppService } from 'src/app/services/appservice.service';
@@ -9,6 +9,7 @@ import { AppService } from 'src/app/services/appservice.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent {
+  @Input() deviceInfo: any;
   links: Link[] = [];
   linkSub: Subscription = new Subscription();
 

@@ -18,6 +18,7 @@ export class ProjectsComponent {
 
   projects: Project[] = [];
   projectSub : Subscription = new Subscription();
+  
 
   constructor(private AppService: AppService, private MatSnackBar: MatSnackBar) { }
 

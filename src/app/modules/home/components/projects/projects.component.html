@@ -32,7 +32,7 @@
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button>
+              <button mat-button routerLink="{{project.link}}" [routerLinkActive]="'active'">
                 <mat-icon>code</mat-icon>
               </button>
             </mat-card-actions>
@@ -87,7 +87,7 @@
                     </div>
                 </mat-card-content>
                 <mat-card-actions>
-                  <button mat-button>
+                  <button mat-button routerLink="{{project.link}}">
                     <mat-icon>code</mat-icon>
                   </button>
                 </mat-card-actions>

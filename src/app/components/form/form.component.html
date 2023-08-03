@@ -1,0 +1,70 @@
+<div class="">
+	<div class="row">
+	  <div class="col-md-12">
+		<div class="stars">
+		  <form action="">
+			<input class="star star-5" id="star-5" type="radio" name="star" />
+  
+			<label class="star star-5" for="star-5"></label>
+  
+			<input class="star star-4" id="star-4" type="radio" name="star" />
+  
+			<label class="star star-4" for="star-4"></label>
+  
+			<input class="star star-3" id="star-3" type="radio" name="star" />
+  
+			<label class="star star-3" for="star-3"></label>
+  
+			<input class="star star-2" id="star-2" type="radio" name="star" />
+  
+			<label class="star star-2" for="star-2"></label>
+  
+			<input class="star star-1" id="star-1" type="radio" name="star" />
+  
+			<label class="star star-1" for="star-1"></label>
+		  </form>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+<div class="text-center">
+  <h2>tu opinion es importante</h2>
+</div>
+
+<div class="text-center">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input
+      matInput
+      placeholder="por@ejemplo.com"
+      [formControl]="email"
+      required
+    />
+    <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+</div>
+<div class="text-center">
+  <mat-form-field>
+    <mat-label>Seleccione</mat-label>
+    <mat-select>
+      <mat-option value="one">Particular</mat-option>
+      <mat-option value="two">Empresa</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+<div class="text-center">
+  <mat-form-field>
+    <mat-label>Mensaje</mat-label>
+    <input
+      matInput
+      placeholder="hablemos sobre..."
+      [formControl]="message"
+      required
+    />
+    <mat-error *ngIf="message.invalid">{{ getErrorMessage() }}</mat-error>
+  </mat-form-field>
+</div>
+<div class="text-center">
+  <button mat-raised-button color="primary">Enviar</button>
+</div>

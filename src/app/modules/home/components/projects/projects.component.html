@@ -32,7 +32,9 @@
               </p>
             </mat-card-content>
             <mat-card-actions>
-              <button mat-button>click aqui para ver el codigo</button>
+              <button mat-button>
+                <mat-icon>code</mat-icon>
+              </button>
             </mat-card-actions>
           </mat-card>
         </ng-container>
@@ -41,7 +43,7 @@
   </div>
 
   <div *ngIf="deviceInfo.isDesktop">
-    <h1 class="text-center fw-bold text-primary">Proyectos</h1>
+    <h1 style="font-size: 5rem" class="text-center text-primary mt-3">Proyectos</h1>
     <p class="text-center">Estos son algunos de los proyectos que he realizado</p>
 
     <div class="mx-4">
@@ -76,7 +78,7 @@
                   <p>
                     {{ project.description_title }}
                     <a class="btn" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+ project.id" role="button" aria-expanded="false" aria-controls="collapseExample" style="margin: 0; padding: 0;">
-                      leer mas
+                      leer más
                     </a>
                     <div class="collapse" id="{{project.id}}">
                       <div class="card card-body">

@@ -2,7 +2,7 @@
 	"name": "App de música",
 	"description_title": "App de música (incluido reproductor) similar a Spotify hecha con Angular.            ",
 	"description_body" : "Entre sus funcionalidades se encuentran: login, registro, búsqueda de canciones, reproducción de canciones, creación de playlist, etc.",
-	"skills": "Angular, NodeJS, Angular Material, TypeScript, Angular CLI, conexión y creación de API, diseño de interfaz de usuario, etc.",
+	"skills": "Angular, NodeJS, Angular Material, Angular CLI, conexión y creación de API, diseño de interfaz de usuario, etc.",
 	"icon": "fa-solid fa-music",
 	"image": "../../assets/images/app-music.png",
 	"link": "https://www.google.com",

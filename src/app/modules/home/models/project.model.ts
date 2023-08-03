@@ -1,7 +1,7 @@
 export interface Project { 
     name: string;
-    description_title: string;
-    description_body: string;
+    descriptionTitle: string;
+    descriptionBody: string;
 	skills: string;
     image: string;
 	icon: string;

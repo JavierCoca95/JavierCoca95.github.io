@@ -19,7 +19,7 @@ export class ProjectsComponent {
   projects: Project[] = [];
   projectSub : Subscription = new Subscription();
 
-  constructor(private appService: AppService, private _snack: MatSnackBar) { }
+  constructor(private AppService: AppService, private MatSnackBar: MatSnackBar) { }
 
   ngOnDestroy(): void {
     this.projectSub?.unsubscribe();
@@ -27,7 +27,7 @@ export class ProjectsComponent {
   }
 
   ngOnInit(): void {
-    this.projectSub = this.appService.getProjects().subscribe({
+    this.projectSub = this.AppService.getProjects().subscribe({
       next: (res: Project[]) => {
         this.projects = res;
       },

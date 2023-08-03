@@ -27,8 +27,8 @@
 
             <mat-card-content>
               <p>
-                {{ project.description_title }}
-                {{ project.description_body }}
+                {{ project.descriptionTitle }}
+                {{ project.descriptionBody }}
               </p>
             </mat-card-content>
             <mat-card-actions>
@@ -76,13 +76,13 @@
 
                 <mat-card-content>
                   <p>
-                    {{ project.description_title }}
+                    {{ project.descriptionTitle }}
                     <a class="btn" data-bs-toggle="collapse" [attr.data-bs-target]="'#'+ project.id" role="button" aria-expanded="false" aria-controls="collapseExample" style="margin: 0; padding: 0;">
                       leer más
                     </a>
                     <div class="collapse" id="{{project.id}}">
                       <div class="card card-body">
-                        {{ project.description_body }}
+                        {{ project.descriptionBody }}
                       </div>
                     </div>
                 </mat-card-content>

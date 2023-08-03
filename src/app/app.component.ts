@@ -12,10 +12,10 @@ export class AppComponent implements OnInit {
   deviceInfo!: { isMobile: boolean; isDesktop: boolean; isTablet: boolean; };
   title = 'my-app';
 
-  constructor(private appservice : AppService){}
+  constructor(private AppService : AppService){}
   ngOnInit(): void {
 
-    this.deviceInfo = this.appservice.devicetype();
+    this.deviceInfo = this.AppService.devicetype();
     
   }
 }

@@ -12,12 +12,11 @@ import { AppService } from 'src/app/services/appservice.service';
 })
 export class HomeComponent implements OnInit{
   deviceInfo!: { isMobile: boolean; isDesktop: boolean; isTablet: boolean; };
-  @ViewChild('aboutme') appAboutMe!: AboutmeComponent;
-
-  constructor(private deviceService: AppService) {
+ 
+  constructor(private AppService: AppService) {
   }
   ngOnInit() {
-    this.deviceInfo = this.deviceService.deviceInfo;
+    this.deviceInfo = this.AppService.deviceInfo;
   }
   }
 

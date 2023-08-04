@@ -1,5 +1,4 @@
-import { Component, ViewChild, ViewEncapsulation, OnInit } from '@angular/core';
-import { AboutmeComponent } from './components/aboutme/aboutme.component';
+import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { AppService } from 'src/app/services/appservice.service';
 
 

@@ -55,16 +55,29 @@
 </div>
 <div class="text-center">
   <mat-form-field>
+    <textarea matInput [formControl]="message"></textarea>
     <mat-label>Mensaje</mat-label>
-    <input
-      matInput
-      placeholder="hablemos sobre..."
-      [formControl]="message"
-      required
-    />
+    
     <mat-error *ngIf="message.invalid">{{ getErrorMessage() }}</mat-error>
   </mat-form-field>
 </div>
 <div class="text-center">
+  <mat-form-field>
+    <mat-label>Fecha</mat-label>
+    <input matInput [matDatepicker]="picker" placeholder="Elige una fecha">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+<div class="text-center mt-3 mb-3" >
+    <button mat-raised-button color="primary" (click)="openImageCapturer()">Cargar Imagen</button>
+  <input type="file" accept="image/*" id="imageCapturer" style="display: none;" (change)="useImage($event)">
+  <img class="img-thumbnail img-fluid" *ngIf="URL" [src]="URL" id="imageViewer" style="max-width: 50px; max-height: 50px;">
+</div>
+  
+</div>
+<div class="text-center mb-3 mt-3">
   <button mat-raised-button color="primary">Enviar</button>
 </div>
+
+

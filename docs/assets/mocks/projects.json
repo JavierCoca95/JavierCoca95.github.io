@@ -1,0 +1,43 @@
+[{
+	"name": "App de música",
+	"descriptionTitle": "App de música (incluido reproductor) similar a Spotify hecha con Angular.            ",
+	"descriptionBody" : "Entre sus funcionalidades se encuentran: login, registro, búsqueda de canciones, reproducción de canciones, creación de playlist, etc.",
+	"skills": "Angular, NodeJS, Angular Material, Angular CLI, conexión y creación de API, diseño de interfaz de usuario, etc.",
+	"icon": "fa-solid fa-music",
+	"image": "../../assets/images/app-music.png",
+	"link": "https://github.com/JavierCoca95/appMusic",
+	"id": "1"
+  },
+  
+  {
+	"name": "Tienda online",
+	"descriptionTitle": "Página web de una tienda online de zapateria  hecha con JavaScript. ",
+	"descriptionBody" : "Entre sus funcionalidades se encuentran: carrito de compras, selección de productos, animaciones, etc.",
+	"skills": "JavaScript, HTML, CSS, Bootstrap, manipulación del DOM, funciones que implementan animaciones, etc.",
+	"icon": "fa-solid fa-tag",
+	"image": "../../assets/images/shop-pic.png",
+	"link": "https://github.com/JavierCoca95/tiendaOnline",
+	"id": "2"
+  },
+
+  {
+	"name": "Página TV",
+	"descriptionTitle": "Página web similar a Netflix, donde poder encontrar películas y series. ",
+	"descriptionBody" : "Entre sus funcionalidades se encuentran: búsqueda de películas y series, visualización de información de las mismas, etc.",
+	"skills": "JavaScript, HTML, CSS, Bootstrap, llamadas a API, diseño de interfaz de usuario, estructura de proyecto, etc.",
+	"icon": "fa-solid fa-tv",
+	"image": "../../assets/images/tv-pic.png",
+	"link": "https://www.google.com",
+	"id" : "3"
+  },
+
+  {
+	"name": "Landing page",
+	"descriptionTitle": "Reto de Frontend Mentor, replica una landing page de una banca online. ",
+	"descriptionBody" : "Se otorgó un diseño de referencia y se debía replicar lo más fielmente posible.",
+	"skills": "HTML, CSS, Bootstrap, responsive design, metodología de trabajo basada en diseño de interfaz de usuario, etc.",
+	"icon": "fa-solid fa-building-columns",
+	"image": "../../assets/images/easybank-cut.png",
+	"link": "https://github.com/JavierCoca95/landingbank",
+	"id" : "4"
+  }]

@@ -1,60 +1,74 @@
-<div class="text-center">
-  <h2>tu opinion es importante</h2>
-</div>
-<div class="container">
-  <h2>Datos personales</h2>
-  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <mat-form-field appearance="fill">
-    <mat-label for="first-name">Nombre </mat-label>
+<div class="formbody">
+
+<form class="form" [formGroup]="practiceForm" (ngSubmit)="onSubmit()">
+  <div class="field">
+    <label class="label">username</label>
     <input
-      matInput
-      id="first-name"
-      type="text"
-      formControlName="firstName"
-      required
+      class="input"
+      #input
+      maxlength="10"
+      id="username"
+      formControlName="username"
+      [class.invalid]="isControlValid('username')"
     />
-  </mat-form-field>
+    <mat-hint align="end">{{ input.value.length }}/10</mat-hint>
 
-  <mat-form-field appearance="fill">
-    <mat-label for="last-name">Apellidos</mat-label>
-    <input
-      matInput
-      id="last-name"
-      type="text"
-      formControlName="lastName"
-      required
-    />
-  </mat-form-field>
-
-  <div formGroupName="address">
-    <h2>Direccion</h2>
-    <mat-form-field>
-      <mat-label for="street">Calle: </mat-label>
-      <input
-        matInput
-        id="street"
-        type="text"
-        formControlName="street"
-        required
-      />
-    </mat-form-field>
-
-    <mat-form-field>
-      <mat-label for="city">Ciudad</mat-label>
-      <input matInput id="city" maxlength="15" #city type="text" formControlName="city" required />
-      <mat-hint align="end">{{city.value.length}}/15</mat-hint>
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label for="state">Estado: </mat-label>
-      <input matInput id="state" type="text" formControlName="state" required />
-    </mat-form-field>
-    <mat-form-field>
-      <mat-label for="zip">Codigo postal: </mat-label>
-      <input matInput id="zip" type="text" formControlName="zip" required />
-    </mat-form-field>
+    <span
+      *ngIf="
+        practiceForm.get('username')?.invalid &&
+        (practiceForm.get('username')?.dirty ||
+          practiceForm.get('username')?.touched)
+      "
+      >Error</span
+    >
   </div>
-  <p>Por favor, complete el formulario</p>
-  <button type="submit" [disabled]="!profileForm.valid">Enviar</button>
+
+  <div class="field">
+    <label class="label">email</label>
+    <input
+      class="input"
+      id="email"
+      formControlName="email"
+      [class.invalid]=" isControlValid('email')"
+    />
+    <span
+      *ngIf="
+        practiceForm.get('email')?.invalid &&
+        (practiceForm.get('email')?.dirty || practiceForm.get('email')?.touched)
+      "
+      >Error</span
+    >
+  </div>
+
+  <div class="field">
+    <h2 class="label">tu puesto actual</h2>
+    <select formControlName="roleId" id="roleId" class="input" #input>
+      <option *ngFor="let role of roles" [ngValue]="role.id">
+        {{ role.title }}
+      </option>
+    </select>
+  </div>
+
+  <div class="field">
+    <h2 class="label"> elige a tu autor favorito</h2>
+    <select formControlName="autor" class="input" #input>
+      <option  *ngFor="let article of articles1" [ngValue]="article.author">
+        {{ article.author }}
+      </option>
+    </select>
+  </div>
+
+
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="practiceForm.invalid"
+    type="submit"
+  >
+    enviar
+  </button>
 </form>
+
+
 </div>
 

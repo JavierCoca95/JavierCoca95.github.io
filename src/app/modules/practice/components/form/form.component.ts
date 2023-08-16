@@ -1,43 +1,64 @@
-import { Component} from '@angular/core';
-import { FormGroup, FormControl, Validators} from '@angular/forms';
-import { HttpClient, HttpErrorResponse, HttpEventType, HttpRequest, HttpResponse} from '@angular/common/http';
-import {FormsModule} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
-
-
-
-
-
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { HttpService } from 'src/app/services/httpservice.service';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css'],
 })
-export class FormComponent {
+export class FormComponent implements OnInit {
+  [x: string]: any;
 
-  profileForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    address : new FormGroup({
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      zip: new FormControl(''),
-  }),
+  articles1: any;
+
+  cities: any;
+
+  roles = [
+    { id: 1, title: 'developer' },
+    { id: 2, title: 'recruiter' },
+  ];
+
+  constructor(private fb: FormBuilder, private httpservice: HttpService) {}
+
+  ngOnInit(): void {
+    this.httpservice.getdata().subscribe((response) => {
+      if ('articles' in response) {
+        console.log(response);
+        this.articles1 = response['articles'];
+        console.log(this.articles1);
+      } else console.log('error');
+    });
+
+    const { roleId, autor } = this.practiceForm.controls;
+
+    roleId.valueChanges.subscribe((response: any) => {
+      if (response === 1) {
+        autor.disable();
+        autor.setValue(null);
+      } else {
+        autor.enable();
+      }
+    });
+  }
+
+  practiceForm = this.fb.group({
+    username: ['', Validators.required],
+    email: ['', [Validators.required, Validators.email]],
+    roleId: ['', Validators.required],
+    autor: [{ disabled: true }, Validators.required],
   });
 
+  isControlValid(selection: string) {
+    const isvalid = this.practiceForm.get(selection);
+    return isvalid?.invalid && (isvalid.dirty || isvalid.touched);
+  }
+
   onSubmit() {
-    if (this.profileForm.valid) {
-    console.warn(this.profileForm.value);
-  } else {
-    alert('Por favor, rellene todos los campos');
+    if (this.practiceForm.valid) {
+      console.log('se ha enviado al back', this.practiceForm.value);
+    } else {
+      console.log('el formulario tiene errores');
+    }
   }
-  }
-
-  constructor(private _http: HttpClient) { }
-
-  ngOnInit() {
-  }
-
 }
